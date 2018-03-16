@@ -1,5 +1,11 @@
 // ref: Thinking in Java
-// 厄Git的username好像不对？
+//: 对象/HelloDate.java
+
+/** the first thinking in java example program.
+ *  @author ChemistQin
+ *  @version 1.0
+ */
+
 import java.util.*;
 public class HelloDate{
 	public static void main(String[] args) {
