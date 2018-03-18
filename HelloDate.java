@@ -7,9 +7,11 @@
  */
 
 import java.util.*;
-public class HelloDate{
+import static net.mindview.util.Print.*;
+
+public class HelloDate {
 	public static void main(String[] args) {
-		System.out.println("Hellow, it's: ");
-		System.out.println(new Date());
+		System.out.println("Hello, it's: ");
+        System.out.println(new Date());
 	}
 }
