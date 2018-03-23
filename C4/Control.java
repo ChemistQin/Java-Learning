@@ -1,3 +1,4 @@
+package C4;
 import java.lang.Math.*;
 public class Control {
 	public static void main(String[] args) {

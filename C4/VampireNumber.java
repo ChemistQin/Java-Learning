@@ -1,4 +1,5 @@
 //vampire number 吸血鬼数字
+package C4;
 public class VampireNumber {
 	public static void main(String[] args) {
 		int[] startDigit = new int[4];
