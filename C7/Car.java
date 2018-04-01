@@ -4,6 +4,9 @@ class Engine {
 	public void start() {}    //引擎 
 	public void rev() {}       //加速
 	public void stop() {}      
+	public void service() {
+		System.out.println("Service");
+	}
 }
 
 class Wheel {
@@ -34,5 +37,6 @@ public class Car {
 		Car car = new Car();
 		car.left.window.rollup();
 		car.wheel[0].inflate(66);
+		car.eg.service();
 	}
 }
