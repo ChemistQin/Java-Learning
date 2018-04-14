@@ -1,44 +1,30 @@
 package C9.Music;
 
-interface Instrument {
-	int VALUE = 5;
-	void play(Note n);
-	void adjust();
-}
-
-class Wind implements Instrument {
+abstract class Instrument {
 	public void play(Note n) {
 		System.out.println(this + ".play() " + n);
 	}
-	public String toString() {
-		return "Wind";
-	}
+	public abstract String toString();
 	public void adjust() {
 		System.out.println(this + ".adjust()");
 	}
 }
 
-class Percussion implements Instrument {
-	public void play(Note n) {
-		System.out.println(this + ".play() " + n);
-	}
+class Wind extends Instrument {
+	public String toString() {
+		return "Wind";
+	} 		
+}
+
+class Percussion extends Instrument {
 	public String toString() {
 		return "Percussion";
 	}
-	public void adjust() {
-		System.out.println(this + ".adjust()");
-	}
 }
 
-class Stringed implements Instrument {
-	public void play(Note n) {
-		System.out.println(this + ".play() " + n);
-	}
+class Stringed extends Instrument {
 	public String toString() {
 		return "Stringed";
-	}
-	public void adjust() {
-		System.out.println(this + ".adjust()");
 	}
 }
 
