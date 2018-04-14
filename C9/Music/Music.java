@@ -1,55 +1,84 @@
 package C9.Music;
 
-abstract class Instrument {
-	public void play(Note n) {
-		System.out.println(this + ".play() " + n);
-	}
-	public abstract String toString();
-	public void adjust() {
-		System.out.println(this + ".adjust()");
-	}
+interface Instrument {
+	public void adjust();
 }
 
-class Wind extends Instrument {
+interface Playable {
+	public void play(Note n);
+}
+
+class Wind implements Instrument, Playable {
 	public String toString() {
 		return "Wind";
 	} 		
+	public void adjust() {
+		System.out.println(this + ".adjust()");
+	}
+	public void play(Note n) {
+		System.out.println(this + ".play() " + n);
+	}
 }
 
-class Percussion extends Instrument {
+class Percussion implements Instrument, Playable {
 	public String toString() {
 		return "Percussion";
 	}
+	public void adjust() {
+		System.out.println(this + ".adjust()");
+	}
+	public void play(Note n) {
+		System.out.println(this + ".play() " + n);
+	}
 }
 
-class Stringed extends Instrument {
+class Stringed implements Instrument, Playable {
 	public String toString() {
 		return "Stringed";
 	}
+	public void adjust() {
+		System.out.println(this + ".adjust()");
+	}
+	public void play(Note n) {
+		System.out.println(this + ".play() " + n);
+	}
 }
 
-class Brass extends Wind {
+class Brass implements Instrument, Playable {
 	public String toString() {
 		return "Brass";
 	}
+	public void adjust() {
+		System.out.println(this + ".adjust()");
+	}
+	public void play(Note n) {
+		System.out.println(this + ".play() " + n);
+	}
 }
 
-class Woodwind extends Wind {
+class Woodwind implements Instrument, Playable {
 	public String toString() {
 		return "Woodwind";
 	}	
+	public void adjust() {
+		System.out.println(this + ".adjust()");
+	}
+	public void play(Note n) {
+		System.out.println(this + ".play() " + n);
+	}
 }
 
 public class Music {
-	static void tune(Instrument i) {
+	//play() 在接口Playable中而不是Instrument.
+	static void tune(Playable i) {
 		i.play(Note.C_SHARP);
 	}
-	static void tuneAll(Instrument[] e) {
-		for(Instrument i : e)
+	static void tuneAll(Playable[] e) {
+		for(Playable i : e)
 			tune(i);
 	}
 	public static void main(String[] args) {
-		Instrument[] orchestra = {
+		Playable[] orchestra = {
 			new Wind(),
 			new Percussion(),
 			new Stringed(),
