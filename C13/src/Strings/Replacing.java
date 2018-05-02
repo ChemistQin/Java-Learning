@@ -5,6 +5,7 @@ public class Replacing {
 	public static void main(String[] args) {
 		System.out.println(string.replaceFirst("y\\w+", "located"));
 		System.out.println(string.replaceAll("your", "你的"));
+		
 
 	}
 }
