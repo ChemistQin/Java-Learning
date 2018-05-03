@@ -17,5 +17,6 @@ public class Splitting {
 		split(" ");
 		split("\\W+");
 		split("n\\W+");
+		split("the|your");//C13E8
 	}
 }
