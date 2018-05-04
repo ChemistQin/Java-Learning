@@ -1,5 +1,6 @@
 package Strings;
 // {Args: abcabcabcdefabc "abc+" "(abc)+" "(ABC){2,}" } 
+// right-click TestRegularExpression.java file, choose run as, input arguments, run.
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
