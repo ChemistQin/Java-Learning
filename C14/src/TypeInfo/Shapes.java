@@ -27,11 +27,22 @@ class Triangle extends Shape {
 	}
 }
 
+class Rhomboid extends Shape {
+	public String toString() {
+		return "Rhomboid";
+	}
+}
+
 public class Shapes {
 	public static void main(String[] args) {
-		List<Shape> shapeList = Arrays.asList(new Circle(), new Square(), new Triangle());
+		List<Shape> shapeList = Arrays.asList(new Circle(), new Square(), new Triangle(), new Rhomboid());
 		for (Shape shape : shapeList) {
 			shape.draw();
 		}
+		Shape shape = new Rhomboid();
+		Rhomboid rhomboid = (Rhomboid)shape;
+		// Circle circle = (Circle)shape;
+		// TypeInfo.Rhomboid cannot be cast to TypeInfo.Circle.C14E3
+		
 	}
 }

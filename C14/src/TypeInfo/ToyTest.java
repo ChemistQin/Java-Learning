@@ -2,17 +2,19 @@ package TypeInfo;
 
 interface HasBatteries {}
 interface Waterproof {}
-interface Shoot {}
+interface Shoots {}
+interface NewIn {}
 
 class Toy {
 	Toy() {}
 	Toy(int i) {}
 }
 
-class FancyToy extends Toy implements HasBatteries, Waterproof, Shoot{
+class FancyToy extends Toy implements HasBatteries, Waterproof, Shoots, NewIn{
 	FancyToy() {
 		super(1);
 	}
+	int i = 66;
 }
 
 public class ToyTest {
