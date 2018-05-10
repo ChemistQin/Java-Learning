@@ -1,5 +1,5 @@
 package C4;
 
-public class PepperoniPizza {
+public class PepperoniPizza extends Pizza {
 
 }

@@ -1,5 +1,5 @@
 package C4;
 
-public class NYPizzaFactory {
+public class NYPizzaFactory extends PizzaStore {
 
 }
