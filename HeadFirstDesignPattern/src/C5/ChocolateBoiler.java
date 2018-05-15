@@ -55,7 +55,5 @@ public class ChocolateBoiler {
 		chocolateBoiler.boil();//error
 		chocolateBoiler.drain();
 		chocolateBoiler.drain(); //error
-		ChocolateBoiler chocolateBoiler2 = ChocolateBoiler.getInstance();
-		chocolateBoiler2.getClass();
 	}
 }
