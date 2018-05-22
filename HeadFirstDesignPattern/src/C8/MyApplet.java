@@ -1,5 +1,8 @@
 package C8;
 
-public class MyApplet {
+import java.applet.Applet;
 
+@SuppressWarnings("deprecation")
+public class MyApplet extends Applet {
+	//弃用
 }

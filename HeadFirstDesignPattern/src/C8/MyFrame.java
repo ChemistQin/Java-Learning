@@ -11,9 +11,7 @@ public class MyFrame extends JFrame {
 		this.setSize(500,500);
 		this.setVisible(true);
 	}
-	@Override
 	public void paint(Graphics graphics) {
-		// TODO Auto-generated method stub
 		super.paint(graphics);
 		String mString = "I rule!!!";
 		graphics.drawString(mString, 100, 100);
