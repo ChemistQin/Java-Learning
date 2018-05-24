@@ -78,4 +78,10 @@ public class GumballMachine {
 		return count;
 	}
 	
+	void refill(int refillNumber) {
+		this.count = refillNumber;
+		this.setState(this.getNoQuarterState());
+		System.out.println("装填" + refillNumber + "个" + "🍬");
+	}
+	
 }

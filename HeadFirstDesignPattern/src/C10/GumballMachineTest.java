@@ -24,5 +24,10 @@ public class GumballMachineTest {
 		gumballMachine.insertQuarter();
 		gumballMachine.turnCrank();
 		
+		gumballMachine.refill(3);
+		
+		gumballMachine.insertQuarter();
+		gumballMachine.turnCrank();
+		
 	}
 }

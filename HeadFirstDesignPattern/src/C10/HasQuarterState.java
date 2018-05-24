@@ -1,9 +1,9 @@
 package C10;
 
-import java.util.Random;
+//import java.util.Random;
 
 public class HasQuarterState implements State {
-	Random randomWinner = new Random(System.currentTimeMillis());
+	//Random randomWinner = new Random(System.currentTimeMillis());
 	GumballMachine gumballMachine;
 	
 	public HasQuarterState(GumballMachine gumballMachine) {
@@ -21,13 +21,16 @@ public class HasQuarterState implements State {
 	
 	public void turnCrank() {
 		System.out.println("转动曲柄出货");
-		//gumballMachine.setState(gumballMachine.getSoldState());
-		int winner = randomWinner.nextInt(10);
+		gumballMachine.setState(gumballMachine.getSoldState());
+		/*
+		 
 		if ((winner == 0) && (gumballMachine.getCount() > 1)) {
 			gumballMachine.setState(gumballMachine.getWinnerState());
 		} else {
 			gumballMachine.setState(gumballMachine.getSoldState());
 		}
+		
+		*/
 	}
 	
 	public void dispense() {
