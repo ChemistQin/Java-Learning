@@ -40,8 +40,7 @@ public class Complex {
 	}
 	
 	Complex add(Complex complex2) {
-		//double real2 = complex2.getReal();
-		//double image2 = complex2.getImage();
+		// complex + operator
 		double newReal = this.real + complex2.real;
 		double newImage = this.image + complex2.image;
 		Complex newComplex = new Complex(newReal, newImage);
@@ -49,8 +48,7 @@ public class Complex {
 	}
 	
 	Complex sub(Complex complex2) {
-		//double real2 = complex2.getReal();
-		//double image2 = complex2.getImage();
+		//complex - operator
 		double newReal = this.real - complex2.real;
 		double newImage = this.image - complex2.image;
 		Complex newComplex = new Complex(newReal, newImage);
@@ -58,8 +56,7 @@ public class Complex {
 	}
 	
 	Complex mul(Complex complex2) {
-		//double real2 = complex2.getReal();
-		//double image2 = complex2.getImage();
+		//complex * operator
 		double newReal = this.real*complex2.real - this.image*complex2.image;
 		double newImage = this.image*complex2.real - this.real*complex2.image;
 		Complex newComplex = new Complex(newReal, newImage);
@@ -67,8 +64,7 @@ public class Complex {
 	}
 	
 	Complex div(Complex complex2) {
-		//double real2 = complex2.getReal();
-		//double image2 = complex2.getImage();
+		//complex / operator
 		double denominator = complex2.real*complex2.real + complex2.image*complex2.image;
 		double newReal = (this.real*complex2.real + this.image*complex2.image)/denominator;
 		double newImage = (this.image*complex2.real - this.real*complex2.image)/denominator;
@@ -80,7 +76,7 @@ public class Complex {
 		if (image > 0) {
 			System.out.println(real + " + " + image + "i");
 		} else if (image < 0 ) {
-			System.out.println(real + "" + image + "i");
+			System.out.println(real + "   " + image + "i");
 		} else {
 			System.out.println(real);
 		}
