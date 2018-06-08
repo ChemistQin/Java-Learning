@@ -2,18 +2,22 @@ package algorithm;
 
 public class TestDriver {
 	public static void main(String[] args) {
-		/*
-		int[] array = {3, 2, 5, 7, 13, 21, 19, 23, 11};
+		
+		int[] array = {33, 7, 5, 2, 1, 211, 19, 23, 11};
 		Sorter sorter = new Sorter();
 		//sorter.selectSort(array);
-		sorter.quickSort(array, 0, array.length - 1);
-		for (int i : array) {
-			System.out.print(i + " ");
-		}
-		*/
+		//sorter.quickSort(array, 0, array.length - 1);
+		sorter.bubbleSort(array);
+		sorter.printArray(array);
 		
-		System.out.println("Happy " + 24 + "th Birthday");
-		System.out.println("Happy " + 0b00011000 + "th Birthday");
-		System.out.println("Happy " + 0x18 + "th Birthday");
+		
+		
 	}
 }
+
+/*
+June 7, 2018
+System.out.println("Happy " + 0b00011000 + "th Birthday");
+System.out.println("Happy " + 24 + "th Birthday");
+System.out.println("Happy " + 0x18 + "th Birthday");
+*/
