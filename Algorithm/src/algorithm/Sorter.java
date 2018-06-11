@@ -2,6 +2,7 @@ package algorithm;
 
 
 public class Sorter {
+	
 	public void bubbleSort(int[] array) {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = 0; j < array.length - 1 - i; j++) {
@@ -62,6 +63,36 @@ public class Sorter {
         }
         quickSort(array, begin, j);
         quickSort(array, i, end);
+	}
+	
+	public void heapAdjust(int[] array, int i, int n) {
+		int child, father;
+		for (father = array[i]; leftChild(i) < n; i = child) {
+			child = leftChild(i);
+			if (child != n - 1 && array[child] < array[child + 1]) {
+				child++;
+			}
+			if (father < array[child]) {
+				array[i] = array[child];
+			} else {
+				break;
+			}
+		}
+		array[i] = father;
+	}
+	
+	public int leftChild(int i) {
+		return 2 * i + 1;
+	}
+	
+	public void heapSort(int[] array) {
+		for (int i = array.length/2; i >= 0; i--) {
+			heapAdjust(array, i, array.length);
+		}
+		for (int i = array.length - 1; i > 0; i--) {
+			swap(array, 0, i);
+			heapAdjust(array, 0, i);
+		}
 	}
 	
 	public void swap(int[] array, int i, int j) {

@@ -7,7 +7,11 @@ public class TestDriver {
 		Sorter sorter = new Sorter();
 		//sorter.selectSort(array);
 		//sorter.quickSort(array, 0, array.length - 1);
-		sorter.bubbleSort(array);
+		//sorter.bubbleSort(array);
+		System.out.println("before:");
+		sorter.printArray(array);
+		System.out.println("\nafter:");
+		sorter.heapSort(array);
 		sorter.printArray(array);
 		
 		
