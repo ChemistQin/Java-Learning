@@ -4,15 +4,15 @@ public class TestDriver {
 	public static void main(String[] args) {
 		
 		int[] array = {33, 7, 5, 2, 1, 211, 19, 23, 11};
-		Sorter sorter = new Sorter();
+		//Sorter sorter = new Sorter();
 		//sorter.selectSort(array);
 		//sorter.quickSort(array, 0, array.length - 1);
 		//sorter.bubbleSort(array);
 		System.out.println("before:");
-		sorter.printArray(array);
+		Sorter.printArray(array);
 		System.out.println("\nafter:");
-		sorter.heapSort(array);
-		sorter.printArray(array);
+		Sorter.heapSort(array);
+		Sorter.printArray(array);
 		
 		
 		

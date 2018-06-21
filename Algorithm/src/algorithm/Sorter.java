@@ -3,7 +3,7 @@ package algorithm;
 
 public class Sorter {
 	
-	public void bubbleSort(int[] array) {
+	public static void bubbleSort(int[] array) {
 		for (int i = 0; i < array.length - 1; i++) {
 			for (int j = 0; j < array.length - 1 - i; j++) {
 				if (array[j] > array[j + 1]) {
@@ -13,7 +13,7 @@ public class Sorter {
 		}
 	}
 	
-	public void selectSort(int[] array) {
+	public static void selectSort(int[] array) {
 		for (int i = 0; i < array.length; i++) {
 			for (int j = i + 1; j < array.length; j++) {
 				if (array[i] > array[j]) {
@@ -28,7 +28,7 @@ public class Sorter {
 		}
 	}
 	
-	public void insertSort(int[] array) {
+	public static void insertSort(int[] array) {
 		int j;
 		for (int i = 1; i < array.length; i++) {
 			if (array[i] < array[i - 1]) {
@@ -41,7 +41,7 @@ public class Sorter {
 		}
 	}
 	
-	public void quickSort(int[] array, int begin, int end) {
+	public static void quickSort(int[] array, int begin, int end) {
 		if (begin >= end || array == null || array.length <= 1) {
             return;
         }
@@ -65,7 +65,7 @@ public class Sorter {
         quickSort(array, i, end);
 	}
 	
-	public void heapAdjust(int[] array, int i, int n) {
+	public static void heapAdjust(int[] array, int i, int n) {
 		int child, father;
 		for (father = array[i]; leftChild(i) < n; i = child) {
 			child = leftChild(i);
@@ -81,11 +81,11 @@ public class Sorter {
 		array[i] = father;
 	}
 	
-	public int leftChild(int i) {
+	public static int leftChild(int i) {
 		return 2 * i + 1;
 	}
 	
-	public void heapSort(int[] array) {
+	public static void heapSort(int[] array) {
 		for (int i = array.length/2; i >= 0; i--) {
 			heapAdjust(array, i, array.length);
 		}
@@ -95,13 +95,13 @@ public class Sorter {
 		}
 	}
 	
-	public void swap(int[] array, int i, int j) {
+	public static void swap(int[] array, int i, int j) {
 		int t = array[i];
 		array[i] = array[j];
 		array[j] = t;
 	}
 	
-	public void printArray(int[] array) {
+	public static void printArray(int[] array) {
 		for (int i : array) {
 			System.out.print(i + " ");
 		}
