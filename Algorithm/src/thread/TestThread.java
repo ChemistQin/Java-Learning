@@ -1,4 +1,4 @@
-package algorithm;
+package thread;
 
 class RunnableDemo implements Runnable {
 	   private Thread t;
@@ -26,7 +26,7 @@ class RunnableDemo implements Runnable {
 	   public void start () {
 	      System.out.println("Starting " +  threadName );
 	      if (t == null) {
-	         t = new Thread (this, threadName);
+	         t = new Thread(this, threadName);
 	         t.start ();
 	      }
 	   }
