@@ -7,14 +7,13 @@ public class NumberTest {
 		System.out.println(x.floatValue());
 		System.out.println(Integer.toHexString(1314));
 		System.out.println(Integer.toBinaryString(1111));
-		System.out.println(Integer.parseInt("kona", 27));
+		System.out.println(Integer.parseInt("Kona", 27));
 		/*
 		 * 27进制
-		 * 0 1 2 3 4 5 6 7 8 9 
-		 * A B C D E F G H I J 
-		 * K L M N O P Q R S T 
-		 * U V W X Y Z
-		 * Kona = 21 * 27 ^ 3 + 25 * 27 ^ 2 + 24 * 27 + 10
+		 * 1 2 3 4 5 6 7 8 9 A
+		 * B C D E F G H I J K
+		 * L M N O P Q R 
+		 * Kona = 20 * 27 ^ 3 + 24 * 27 ^ 2 + 23 * 27 + 10
 		 */
 		System.out.println(20 * Math.pow(27, 3) + 
 						   24 * Math.pow(27, 2) + 
