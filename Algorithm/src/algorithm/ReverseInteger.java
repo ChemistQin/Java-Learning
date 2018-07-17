@@ -4,33 +4,15 @@ package algorithm;
 
 public class ReverseInteger {
 	public static int reverse(int x) {
-        if (x == 0) {
-			return 0;
-		} 
-        
-        String string = "";
-		if (x < 0) {
-			string += "-";
-		} 
-        
-        
-        
-        int bits = (int)Math.log10(Math.abs(x));
-        /*if (bits >= 8) {
-        	System.out.println("bits = " + bits);
-            return 0;
-        }*/
-        for (int i = 0; i <= bits; i++) {
-            string += Math.abs(x) / (int)Math.pow(10, i) % 10; // x / (int)Math.pow(10, i) % 10
+		int rev = 0;
+        while (x != 0) {
+            int pop = x % 10;
+            x /= 10;
+            if (rev > Integer.MAX_VALUE/10 || (rev == Integer.MAX_VALUE / 10 && pop > 7)) return 0;
+            if (rev < Integer.MIN_VALUE/10 || (rev == Integer.MIN_VALUE / 10 && pop < -8)) return 0;
+            rev = rev * 10 + pop;
         }
-        
-        if (string.length() >= 5) {
-			return 0;
-		} else {
-			return Integer.valueOf(string);
-		}
-        
-
+        return rev;
     }
 	public static void main(String[] args) {
 		
@@ -68,4 +50,5 @@ public class ReverseInteger {
 		System.out.println(solution);
 		//System.out.println(bits);
 	}
+	-2147483648 会发生溢出
 	*/
