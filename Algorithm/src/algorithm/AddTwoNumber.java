@@ -21,7 +21,7 @@ public class AddTwoNumber {
 	public ListNode addTwoNumber(ListNode l1, ListNode l2) {
 		ListNode head = new ListNode(0);
 		ListNode ptr = head;
-		int carry = 0;
+		int carry = 0; 
 		while (true) {
 			if (l1 != null) {
 				carry += l1.val;
@@ -32,7 +32,7 @@ public class AddTwoNumber {
 				l2 = l2.next;
 			}
 			ptr.val = carry % 10;
-			carry /= 10;
+			carry /= 10; //进位 
 			if (l1 != null || l2 != null || carry != 0) {
 				ptr = (ptr.next = new ListNode(0));
 			} else break;
