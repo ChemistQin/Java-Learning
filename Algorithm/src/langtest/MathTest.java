@@ -1,4 +1,4 @@
-package algorithm;
+package langtest;
 
 public class MathTest {
 	public static void main(String[] args) {
