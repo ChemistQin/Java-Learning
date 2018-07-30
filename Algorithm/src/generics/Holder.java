@@ -1,5 +1,9 @@
 package generics;
 
+/*
+ * 泛型 generics Holder 
+ * 
+ */
 class Automobile {
 	@Override
 	public String toString() {
