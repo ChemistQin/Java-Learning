@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+ * 数组和泛型容器进行对比
+ * 两者持有对象的方式都是检查类型的
+ * 唯一明显差异在于数组使用【】来访问元素，而List使用的是add()和get()这样的方法
+ */
+
 class BerylliumSphere {
 	private static long counter;
 	private final long id = counter++;
